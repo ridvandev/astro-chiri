@@ -1,4 +1,4 @@
-<script is:inline>
+<script is:inline define:vars={{ baseUrl: import.meta.env.BASE_URL }}>
   // Favicon theme switcher for system theme-based favicon updates, using external SVG file
   class FaviconThemeSwitcher {
     constructor() {
@@ -13,7 +13,7 @@
       }
 
       this.mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-      this.svgUrl = '/favicon.svg'
+      this.svgUrl = `${baseUrl}/favicon.svg`
       this.currentColor = null
       this.svgContent = null
 
