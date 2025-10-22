@@ -79,6 +79,11 @@
     const deleteButton = document.getElementById('delete-button')
     const tagText = document.getElementById('tag-text')
 
+    // Check if elements exist (they won't exist on pages without Tag component)
+    if (!addButton || !inputState || !tagDisplay || !tagInput || !confirmButton || !cancelButton || !deleteButton || !tagText) {
+      return
+    }
+
     if (tagValue) {
       addButton.classList.add('hidden')
       inputState.classList.remove('active')
