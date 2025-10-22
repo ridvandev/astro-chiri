@@ -18,7 +18,7 @@ import path from 'path'
 export default defineConfig({
   site: themeConfig.site.website,
   output: 'static', // Explicitly set to static output
-  base: '/astro-chiri', // Base path for GitHub Pages (must match your repository name)
+  base: '/astro-chiri/', // Base path for GitHub Pages (must match your repository name)
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',
