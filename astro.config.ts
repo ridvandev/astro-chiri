@@ -34,9 +34,10 @@ export default defineConfig({
     rehypePlugins: [rehypeKatex, rehypeCleanup, rehypeImageProcessor, rehypeCopyCode]
   },
   integrations: [
-    playformInline({
-      Exclude: [(file) => file.toLowerCase().includes('katex')]
-    }),
+    // Disabled @playform/inline due to incompatibility with base path
+    // playformInline({
+    //   Exclude: [(file) => file.toLowerCase().includes('katex')],
+    // }),
     mdx(),
     sitemap()
   ],
